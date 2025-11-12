@@ -34,13 +34,13 @@ public class BinarySearch {
     }
 
     private static int search(int[] a, int target, int lo, int hi) {
-        int mid = lo+((hi-lo)/2);
+        int mid = lo + ((hi - lo) / 2);
         // Base case 1: empty range
-        if(a.length == 0||lo>hi){
+        if(lo>hi){
             return -1;
         }
         // Base case 2: found at mid
-        if(mid == target){
+        if(a[mid] == target){
             return mid;
         }
         if (target < a[mid]) return search(a, target, lo, mid - 1);
